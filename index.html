@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="npm-license-analyzer.css" rel="stylesheet">
+<title>npm-license-analyzer</title>
+</head>
+<body>
+
+  <h1>npm-license-analyzer</h1>
+  <table>
+  <tr>
+    <td>npm package:</td>
+    <td class="rightColumn"><input type="text" id="packageName" name="FirstName" value=""><input type="button" id="packageSubmit" class="btn" value="Submit" /></td>
+  </tr>
+  </table>
+
+  <hr>
+  <div id="packageInfo">
+    <table id="packageTable">
+      <tr>
+        <td colspan="2"><b>Package Info</b></td>
+      </tr>
+      <tr>
+        <td>npm address:</td>
+        <td class="rightColumn"><a id='npmAddress' href=""></a></td>
+      </tr>
+      <tr>
+        <td>Github address:</td>
+        <td class="rightColumn"><a target="_blank" id='githubAddress' href=""></a></td>
+      </tr>
+      <tr>
+        <td>Current license:</td>
+        <td class="rightColumn"><span id='currentLicense'></span>&nbsp;&nbsp;<a target="_blank" id='licenseAddress' href=""></a></td>
+      </tr>
+    </table>
+    <hr>
+  </div>
+  <div id="dependencyInfo">
+    <table id="dependencyTable" class="wide">
+    </table>
+    <table id="peerDependencyTable" class="wide">
+    </table>
+    <table id="devDependencyTable" class="wide">
+    </table>     
+  </div>
+  <script src="npm-license-analyzer.js"></script>
+</body>
+</html>
