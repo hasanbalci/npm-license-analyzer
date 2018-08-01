@@ -19,7 +19,7 @@ document.getElementById("packageSubmit").addEventListener("click", function(){
 
 var requestGeneralPackageData = function(npmAddress){
   
-  fetch("http://cors-for-hb.herokuapp.com/" + npmAddress) // Call the fetch function passing the url of the API as a parameter
+  fetch("https://cors-for-hb.herokuapp.com/" + npmAddress) // Call the fetch function passing the url of the API as a parameter
   .then(function(response) {
     return response.text();
   })
@@ -52,7 +52,7 @@ var readGeneralInfo = function(response){
   var licenseField = document.getElementById("currentLicense");
   licenseField.innerHTML = currentLicense;
   
-  fetch("http://cors-for-hb.herokuapp.com/" + githubAddress)
+  fetch("https://cors-for-hb.herokuapp.com/" + githubAddress)
   .then(function(response) {
     return response.text();
   })
@@ -74,7 +74,7 @@ var readGeneralInfo = function(response){
 };
 
 var readPackageJson = function(packageJsonAddress) {
-  fetch("http://cors-for-hb.herokuapp.com/" + packageJsonAddress) // Call the fetch function passing the url of the API as a parameter
+  fetch("https://cors-for-hb.herokuapp.com/" + packageJsonAddress) // Call the fetch function passing the url of the API as a parameter
   .then(function(response) {
     return response.json();
   })
@@ -99,7 +99,7 @@ var parseAndShowDependencyInfo = function(dependencyObject, tableName) {
                     "</td><td style='width:15%'>License</td><td style='width:60%'>Github Address</td></b></tr>";
   
   for (var key in dependencyObject) {    
-    var packageAddress = "http://cors-for-hb.herokuapp.com/https://www.npmjs.com/package/" + key;
+    var packageAddress = "https://cors-for-hb.herokuapp.com/https://www.npmjs.com/package/" + key;
     fetch(packageAddress) // Call the fetch function passing the url of the API as a parameter
     .then(function(response) {
       return response.text();
