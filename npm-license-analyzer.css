@@ -1,12 +1,12 @@
 body {
-  width: 45%;
+  width: 70%;
   height: 100%;
   margin: 2% 0 2% 5%;
   padding: 0px;
 }
 
 .btn {
-  margin: 0px 0px 0px 10px
+  margin: 0px 0px 0px 5px
 }
 
 #packageInfo {
@@ -32,4 +32,20 @@ td.rightColumn {
 
 .title {
   font-weight: bold
+}
+
+li {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-align: justify;
+
+}
+
+ul {
+  list-style-type: circle;
+  padding: 0px 10px 0px 30px;
+}
+
+#explanation {
+  background: #ffe5e5;
 }

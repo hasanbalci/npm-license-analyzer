@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link href="npm-license-analyzer.css" rel="stylesheet">
-<title>npm-license-analyzer</title>
-</head>
-<body>
+  <head>
+    <link href="npm-license-analyzer.css" rel="stylesheet">
+  <title>npm-license-analyzer</title>
+  </head>
+  <body>
+    <h1 style="color: red;">npm-license-analyzer</h1>
+    <div style="width: 100%; overflow: hidden;">
+      <div style="width: 260px; float: left;">
+        <table id="explanation" style="border: 1px solid black;">
+          <tr>
+            <td>
+              <ul>
+                <li>Enter npm package to list its dependencies together with the corresponding licenses.</li>
+                <li>Displayed licenses belong to the latest version of the dependency. If the package isn't using the latest version of the dependency, explicit check may be required.</li>
+                <li>All information is retrieved from the corresponding npm and github pages.</li>
+                <li>npm-license-analyzer is not affiliated with npm, Inc. in any way.</li>
+                <li>If you see any problem, please open an issue in <a target="_blank" href="https://github.com/hasanbalci/npm-license-analyzer">Github</a>.</li>
+                <li>This application is licensed under <a target="_blank" href="https://github.com/hasanbalci/npm-license-analyzer/blob/master/LICENSE"> MIT</a> license.</li>
+              </ul>
+              <span style="padding-left: 20px">Copyright (c) 2018 <a target="_blank" href="http://hasan.balci.bilkent.edu.tr">Hasan Balcı</a></span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div style="margin-left: 275px">
+        <div>
+          <table>
+          <tr>
+            <td>npm package:</td>
+            <td class="rightColumn"><input type="text" id="packageName" name="FirstName" value=""><input type="button" id="packageSubmit" class="btn" value="Submit" /></td>
+          </tr>
+          </table>
+        </div>
+        <hr>
+        <div id="packageInfo">
+          <table id="packageTable">
+            <tr>
+              <td colspan="2"><b>Package Info</b></td>
+            </tr>
+            <tr>
+              <td>npm address:</td>
+              <td class="rightColumn"><a id='npmAddress' href=""></a></td>
+            </tr>
+            <tr>
+              <td>Github address:</td>
+              <td class="rightColumn"><a target="_blank" id='githubAddress' href=""></a></td>
+            </tr>
+            <tr>
+              <td>Current license:</td>
+              <td class="rightColumn"><span id='currentLicense'></span>&nbsp;&nbsp;<a target="_blank" id='licenseAddress' href=""></a></td>
+            </tr>
+          </table>
+          <hr>
+        </div>
 
-  <h1>npm-license-analyzer</h1>
-  <table>
-  <tr>
-    <td>npm package:</td>
-    <td class="rightColumn"><input type="text" id="packageName" name="FirstName" value=""><input type="button" id="packageSubmit" class="btn" value="Submit" /></td>
-  </tr>
-  </table>
-
-  <hr>
-  <div id="packageInfo">
-    <table id="packageTable">
-      <tr>
-        <td colspan="2"><b>Package Info</b></td>
-      </tr>
-      <tr>
-        <td>npm address:</td>
-        <td class="rightColumn"><a id='npmAddress' href=""></a></td>
-      </tr>
-      <tr>
-        <td>Github address:</td>
-        <td class="rightColumn"><a target="_blank" id='githubAddress' href=""></a></td>
-      </tr>
-      <tr>
-        <td>Current license:</td>
-        <td class="rightColumn"><span id='currentLicense'></span>&nbsp;&nbsp;<a target="_blank" id='licenseAddress' href=""></a></td>
-      </tr>
-    </table>
-    <hr>
-  </div>
-  <div id="dependencyInfo">
-    <table id="dependencyTable" class="wide">
-    </table>
-    <table id="peerDependencyTable" class="wide">
-    </table>
-    <table id="devDependencyTable" class="wide">
-    </table>     
-  </div>
-  <script src="npm-license-analyzer.js"></script>
-</body>
+        <div id="dependencyInfo">
+          <table id="dependencyTable" class="wide">
+          </table>
+          <table id="peerDependencyTable" class="wide">
+          </table>
+          <table id="devDependencyTable" class="wide">
+          </table>     
+        </div>
+      </div>
+    </div>
+    <script src="npm-license-analyzer.js"></script>
+  </body>
 </html>

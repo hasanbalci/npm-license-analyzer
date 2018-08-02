@@ -66,7 +66,7 @@ var readGeneralInfo = function(response){
       var licenseAddress = existingLicense.pathname; 
       licenseAddressField.style.visibility = "visible";
       licenseAddressField.href = "https://github.com" + licenseAddress;
-      licenseAddressField.text = "link";
+      licenseAddressField.text = "license file";
     }
     readPackageJson(packageJsonAddress);
     document.getElementById("packageInfo").style.visibility = "visible";
@@ -96,7 +96,7 @@ var parseAndShowDependencyInfo = function(dependencyObject, tableName) {
   document.getElementById(tableName).innerHTML = ""; 
   var dependencyField = document.getElementById(tableName).innerHTML; 
   dependencyField += "<tr class='title'><td style='width:25%'>" + tableName.replace("yTable", "ies") + 
-                    "</td><td style='width:15%'>License</td><td style='width:60%'>Github Address</td></b></tr>";
+                    "</td><td style='width:20%'>License</td><td style='width:55%'>Github Address</td></b></tr>";
   
   for (var key in dependencyObject) {    
     var packageAddress = "https://cors-for-hb.herokuapp.com/https://www.npmjs.com/package/" + key;
